@@ -1,0 +1,22 @@
+[
+  {
+    "name" : "柚子",
+    "price": "9.9",
+    "discount": 0
+  },
+  {
+    "name" : "蜜桔",
+    "price": "8.9",
+    "discount": 0
+  },
+  {
+    "name" : "橙子",
+    "price": "19.9",
+    "discount": 1
+  },
+  {
+    "name" : "柠檬",
+    "price": "19.8",
+    "discount": 1
+  }
+]

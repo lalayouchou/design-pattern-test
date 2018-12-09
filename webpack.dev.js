@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');//输出html
 
 module.exports = {
-  entry:'./app/main.js',//入口文件，可以多个
+  entry:'./src/index.js',//入口文件，可以多个
   output:{
     path:__dirname+'/public',//出口地址
     filename:'bundle.js',//出口文件名
@@ -13,7 +13,13 @@ module.exports = {
     inline:true,
     hot:true,
     historyApiFallback:true,
-    port:9000
+    port:9000,
+    proxy: {
+      '/api/*': {
+        target: 'http://localhost:8880'
+        //代理访问，如果有'http://localhost:9000/api/*'的请求，那么转到'http://localhost:8880/api/*'
+      }
+    }
   },
   module:{
     rules:[
